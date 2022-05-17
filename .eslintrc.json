@@ -1,3 +1,31 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018, // 최신 문법 지원
+    "sourceType": "module", // 모듈 시스템 사용시
+    "ecmaFeatures": {
+      "jsx": true // 리액트의 JSX 파싱을 위해서
+    }
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended", // 리액트 추천 룰셋
+    "plugin:@typescript-eslint/recommended", // 타입스크립트 추천 룰셋
+    "next/core-web-vitals",
+    "next",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended" // (eslint-plugin-prettier)
+  ],
+  "settings": {
+    "react": {
+      "version": "detect" // eslint-plugin-react가 자동 리액트버전탐지
+    }
+  },
+  "rules": {}
 }
