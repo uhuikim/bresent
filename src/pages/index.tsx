@@ -1,9 +1,10 @@
 import Head from 'next/head';
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
 
 import { useTheme } from 'context/ThemeProvider';
+import Image from 'next/image';
 
 const pageContainer = css`
   display: flex;
@@ -24,9 +25,16 @@ const BodyBlock = styled.div`
   transition: background-color 0.2s ease-in-out;
 `;
 
-const Title = styled.h1`
-  color: ${({ theme }) => theme.text};
-`;
+const logo = (theme: Theme) =>
+  css`
+    display: flex;
+    align-items: center;
+    color: ${theme.main};
+    font-size: 2rem;
+    & > p {
+      margin-left: 0.5rem;
+    }
+  `;
 
 const ToggleThemeButton = styled.button`
   outline: none;
@@ -58,7 +66,11 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BodyBlock />
-      <Title>bresent</Title>
+      <h1 css={logo}>
+        <Image src="/logo.png" width={40} height={40} />
+        <p>bresent</p>
+      </h1>
+
       <ToggleThemeButton onClick={() => toggleTheme()}>
         {isDarkTheme ? 'Light Theme' : 'Dark Theme'}
       </ToggleThemeButton>

@@ -1,6 +1,6 @@
 const palette = {
   white: '#ffffff',
-  black: '#282828',
+  black: '#171717',
   main: '#F14FA2',
 };
 
