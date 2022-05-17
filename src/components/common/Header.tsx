@@ -3,11 +3,11 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 const wrap = () => css`
-  background: black;
+  background: red;
 `;
 
 const Header = () => {
-  return <div css={wrap}>ㅇㅇㅇ</div>;
+  return <header css={wrap}>ㅇㅇㅇ</header>;
 };
 
 export default Header;

@@ -1,8 +1,10 @@
 import { css } from '@emotion/react';
-import emotionNormalize from 'emotion-normalize';
+import normalize from './nomalize';
+import base from './base';
 
 const globalStyle = css`
-  ${emotionNormalize},
+  ${normalize},
+  ${base}
 `;
 
 export default globalStyle;
