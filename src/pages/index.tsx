@@ -67,8 +67,11 @@ const IndexPage: NextPage = () => {
       </Head>
       <BodyBlock />
       <h1 css={logo}>
-        <Image src="/logo.png" width={40} height={40} />
-        <p>bresent</p>
+        <Image
+          src={isDarkTheme ? '/logo_w.png' : '/logo_b.png'}
+          width={120}
+          height={120}
+        />
       </h1>
 
       <ToggleThemeButton onClick={() => toggleTheme()}>
