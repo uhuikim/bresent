@@ -3,9 +3,6 @@ import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
 
-import { useTheme } from 'context/ThemeProvider';
-import Image from 'next/image';
-
 const pageContainer = css`
   display: flex;
   flex-direction: column;
@@ -31,33 +28,13 @@ const logo = (theme: Theme) =>
     align-items: center;
     color: ${theme.main};
     font-size: 2rem;
+    padding: 1rem;
     & > p {
       margin-left: 0.5rem;
     }
   `;
 
-const ToggleThemeButton = styled.button`
-  outline: none;
-  border: 0;
-  background-color: transparent;
-  color: ${({ theme }) => theme.text};
-  font-size: 12px;
-  cursor: pointer;
-  &:hover,
-  &:active {
-    text-decoration: underline;
-  }
-  &:hover {
-    opacity: 0.8;
-  }
-  &:active {
-    opacity: 0.7;
-  }
-`;
-
 const IndexPage: NextPage = () => {
-  const { isDarkTheme, toggleTheme } = useTheme();
-
   return (
     <div css={pageContainer}>
       <Head>
@@ -66,17 +43,6 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BodyBlock />
-      <h1 css={logo}>
-        <Image
-          src={isDarkTheme ? '/logo_w.png' : '/logo_b.png'}
-          width={120}
-          height={120}
-        />
-      </h1>
-
-      <ToggleThemeButton onClick={() => toggleTheme()}>
-        {isDarkTheme ? 'Light Theme' : 'Dark Theme'}
-      </ToggleThemeButton>
     </div>
   );
 };
