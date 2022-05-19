@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
+import { breadData } from 'data/data';
+import CardCir from 'components/CardCir';
 
 const pageContainer = css`
   display: flex;
@@ -34,6 +36,11 @@ const logo = (theme: Theme) =>
     }
   `;
 
+const dicWrap = () => css`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
 const IndexPage: NextPage = () => {
   return (
     <div css={pageContainer}>
@@ -43,6 +50,11 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BodyBlock />
+      <div css={dicWrap}>
+        {breadData.map((el) => (
+          <CardCir data={el} />
+        ))}
+      </div>
     </div>
   );
 };

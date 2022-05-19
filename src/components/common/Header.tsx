@@ -59,7 +59,7 @@ const navBar = (theme: Theme) =>
   `;
 
 const navList = (theme: Theme) => css`
-  padding: 1.5rem;
+  padding: 1.3rem;
   font-weight: 600;
   cursor: pointer;
   &:hover {
@@ -74,7 +74,6 @@ const Header = () => {
   const { isDarkTheme, toggleTheme } = useTheme();
   const { pathname } = useRouter();
 
-  console.log(pathname);
   return (
     <header css={wrap}>
       <div css={topHeader}>
