@@ -130,6 +130,11 @@ const normalize = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  ul,
+  ol,
+  li {
+    list-style: none;
+  }
 `;
 
 export default normalize;
