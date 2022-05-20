@@ -13,9 +13,9 @@ export const breadData: Array<{
 }> = [
   { title: '소금빵', imgUrl: '소금빵', country: 'japan' },
   { title: '단팥빵', imgUrl: '단팥빵', country: 'japan' },
-  { title: '정통바게트', imgUrl: '정통바게트', country: 'france' },
-  { title: '마카롱', imgUrl: '마카롱', country: 'france' },
-  { title: '마카롱', imgUrl: '마카롱', country: 'france' },
-  { title: '마카롱', imgUrl: '마카롱', country: 'france' },
-  { title: '마카롱', imgUrl: '마카롱', country: 'france' },
+  { title: '바게트', imgUrl: '바게트', country: 'france' },
+
+  { title: '스콘', imgUrl: '스콘', country: 'england' },
+  { title: '베이글', imgUrl: '베이글', country: 'us' },
+  { title: '브레첼', imgUrl: '브레첼', country: 'germany' },
 ];

@@ -8,6 +8,7 @@ const wrap = () => css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 1050px;
 `;
 const contentWrap = (theme: Theme) => css`
   height: 100%;
