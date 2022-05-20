@@ -51,7 +51,7 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BodyBlock />
-      <SubTitle title="세상의 모든 빵" />
+      <SubTitle title="세상의 모든 빵" link="/dictionary" />
       <div css={dicWrap}>
         {breadData.map((el) => (
           <CardCir data={el} key={el.title} />
