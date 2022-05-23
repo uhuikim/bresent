@@ -15,47 +15,54 @@ export const breadData: Array<{
   ingredient: Array<string>;
 }> = [
   {
-    category: '빵',
+    category: 'bread',
     title: '소금빵',
     imgUrl: '소금빵',
     country: 'japan',
-    ingredient: ['강력분', '계란'],
+    ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
   {
-    category: '빵',
+    category: 'bread',
     title: '단팥빵',
     imgUrl: '단팥빵',
     country: 'japan',
-    ingredient: ['강력분', '계란'],
+    ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
   {
-    category: '빵',
+    category: 'bread',
     title: '바게트',
     imgUrl: '바게트',
     country: 'france',
-    ingredient: ['강력분', '계란'],
+    ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
 
   {
-    category: '빵',
+    category: 'bread',
     title: '스콘',
     imgUrl: '스콘',
     country: 'england',
-    ingredient: ['강력분', '계란'],
+    ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
   {
-    category: '빵',
+    category: 'bread',
     title: '베이글',
     imgUrl: '베이글',
     country: 'us',
-    ingredient: ['강력분', '계란'],
+    ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
   {
-    category: '빵',
+    category: 'bread',
     title: '브레첼',
     imgUrl: '브레첼',
     country: 'germany',
-    ingredient: ['강력분', '계란'],
+    ingredient: ['flour', 'egg', 'salt', 'sugar'],
+  },
+  {
+    category: 'cookie',
+    title: '브레첼',
+    imgUrl: '브레첼',
+    country: 'germany',
+    ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
 ];
 

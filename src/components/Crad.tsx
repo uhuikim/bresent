@@ -8,25 +8,29 @@ type Props = {
     title: string;
     imgUrl: string;
     country: string;
+    category: string;
+    ingredient: Array<string>;
   };
 };
 
 const wrap = (theme: Theme) =>
   css`
-    width: 16rem;
     box-shadow: 2px 2px 1px ${theme.shadow};
     position: relative;
-    padding: 1.5rem;
-    margin: 1rem;
     background: ${theme.white};
     > img {
       width: 230px;
     }
     overflow: hidden;
+    border-radius: 10px;
   `;
 
-const imageArea = () => css``;
+const imageArea = () => css`
+  padding: 0 1.5rem;
+`;
 const desArea = (theme: Theme) => css`
+  padding: 0.8rem 1.5rem;
+
   > p:nth-of-type(1) {
     color: ${theme.subtext};
     margin-bottom: 0.6rem;
@@ -34,7 +38,7 @@ const desArea = (theme: Theme) => css`
   }
   > p:nth-of-type(2) {
     font-weight: bold;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -45,6 +49,14 @@ const flag = (theme: Theme) => css`
   > span {
     margin-left: 0.7rem;
   }
+`;
+
+const ingredientArea = (theme: Theme) => css`
+  display: grid;
+  grid-template-columns: repeat(4, 3rem);
+  border-top: 1px solid ${theme.shadow};
+  justify-content: center;
+  padding: 0.3rem;
 `;
 
 const Card = ({ data }: Props) => {
@@ -60,7 +72,7 @@ const Card = ({ data }: Props) => {
         />
       </div>
       <div css={desArea}>
-        <p>빵</p>
+        <p>{data.category}</p>
         <p>{data.title}</p>
         <div css={flag}>
           <Image
@@ -72,6 +84,13 @@ const Card = ({ data }: Props) => {
           <span>{countryMap[data.country]}</span>
         </div>
       </div>
+      <ul css={ingredientArea}>
+        {data.ingredient.map((el) => (
+          <li>
+            <Image src={`/ingredient/${el}.png`} width="35" height="35" />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

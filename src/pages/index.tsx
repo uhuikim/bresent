@@ -38,8 +38,10 @@ const logo = (theme: Theme) =>
   `;
 
 const dicWrap = () => css`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 `;
 
 const IndexPage: NextPage = () => {
