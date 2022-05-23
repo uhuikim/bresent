@@ -3,8 +3,8 @@ import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
 import { breadData } from 'data/data';
-import CardCir from 'components/CardCir';
 import SubTitle from 'components/SubTitle';
+import Card from 'components/Crad';
 
 const pageContainer = css`
   display: flex;
@@ -54,7 +54,7 @@ const IndexPage: NextPage = () => {
       <SubTitle title="세상의 모든 빵" link="/dictionary" />
       <div css={dicWrap}>
         {breadData.map((el) => (
-          <CardCir data={el} key={el.title} />
+          <Card data={el} key={el.title} />
         ))}
       </div>
     </div>

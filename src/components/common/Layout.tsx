@@ -12,14 +12,14 @@ const wrap = () => css`
 `;
 const contentWrap = (theme: Theme) => css`
   height: 100%;
-  width: 1050px;
+  width: 1160px;
 `;
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div css={wrap}>
       <Header />
-      <div css={contentWrap}>{children}</div>
+      <main css={contentWrap}>{children}</main>
     </div>
   );
 };
