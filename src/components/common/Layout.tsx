@@ -12,7 +12,8 @@ const wrap = () => css`
 `;
 const contentWrap = (theme: Theme) => css`
   height: 100%;
-  width: 1160px;
+  min-width: 1050px;
+  padding: 1rem;
 `;
 
 const Layout = ({ children }: { children: ReactNode }) => {
