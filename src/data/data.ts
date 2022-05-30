@@ -4,7 +4,7 @@ export const navData: Array<{ title: string; url: string }> = [
   { title: '빵 재료', url: '/ingredient' },
   { title: '오답노트', url: '/note' },
   { title: '레시피', url: '/recipe' },
-  { title: '도서', url: '/book' },
+  { title: '빵 자료', url: '/book' },
 ];
 
 export const breadData: Array<{
@@ -18,21 +18,21 @@ export const breadData: Array<{
     category: 'bread',
     title: '소금빵',
     imgUrl: '소금빵',
-    country: 'japan',
+    country: 'JP',
     ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
   {
     category: 'bread',
     title: '단팥빵',
     imgUrl: '단팥빵',
-    country: 'japan',
+    country: 'JP',
     ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
   {
     category: 'bread',
     title: '바게트',
     imgUrl: '바게트',
-    country: 'france',
+    country: 'FR',
     ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
 
@@ -40,28 +40,28 @@ export const breadData: Array<{
     category: 'bread',
     title: '스콘',
     imgUrl: '스콘',
-    country: 'england',
+    country: 'GB',
     ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
   {
     category: 'bread',
     title: '베이글',
     imgUrl: '베이글',
-    country: 'us',
+    country: 'US',
     ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
   {
     category: 'bread',
     title: '브레첼',
     imgUrl: '브레첼',
-    country: 'germany',
+    country: 'DE',
     ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
   {
     category: 'cookie',
     title: '브레첼',
     imgUrl: '브레첼',
-    country: 'germany',
+    country: 'DE',
     ingredient: ['flour', 'egg', 'salt', 'sugar'],
   },
 ];
@@ -96,10 +96,10 @@ const type = [
 ];
 
 export const countryMap: Record<string, string> = {
-  japan: '일본',
-  korea: '한국',
-  france: '프랑스',
-  england: '영국',
-  us: '미국',
-  germany: '독일',
+  JP: '일본',
+  KR: '한국',
+  FR: '프랑스',
+  GB: '영국',
+  US: '미국',
+  DE: '독일',
 };

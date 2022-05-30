@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import { countryMap } from 'data/data';
+import ReactCountryFlag from 'react-country-flag';
 import Image from 'next/image';
 import React from 'react';
 
@@ -75,11 +76,13 @@ const Card = ({ data }: Props) => {
         <p>{data.category}</p>
         <p>{data.title}</p>
         <div css={flag}>
-          <Image
-            src={`/flag/${data.country}.png`}
-            width="20"
-            height="20"
-            objectFit="contain"
+          <ReactCountryFlag
+            countryCode={`${data.country}`}
+            svg
+            style={{
+              width: '20px',
+            }}
+            title={`${data.country}`}
           />
           <span>{countryMap[data.country]}</span>
         </div>
