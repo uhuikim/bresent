@@ -117,12 +117,18 @@ export const breadDetail: Record<number, Object> = {
     title: '소금빵',
   },
   2: {
-    title: '소금빵',
+    title: '단팥빵',
   },
   3: {
-    title: '소금빵',
+    title: '바게트',
   },
   4: {
-    title: '소금빵',
+    title: '스콘',
+  },
+  5: {
+    title: '베이글',
+  },
+  6: {
+    title: '브레첼',
   },
 };
