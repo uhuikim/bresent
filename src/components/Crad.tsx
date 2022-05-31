@@ -4,16 +4,10 @@ import ReactCountryFlag from 'react-country-flag';
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
+import { breadCardType } from 'type';
 
 type Props = {
-  data: {
-    title: string;
-    imgUrl: string;
-    country: string;
-    category: string;
-    ingredient: Array<string>;
-    id: number;
-  };
+  data: breadCardType;
 };
 
 const wrap = (theme: Theme) =>

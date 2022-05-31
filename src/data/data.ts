@@ -1,3 +1,5 @@
+import { breadCardType, breadDetailType } from 'type';
+
 export const navData: Array<{ title: string; url: string }> = [
   { title: '빵 선물', url: '/present' },
   { title: '빵 사전', url: '/dictionary' },
@@ -7,14 +9,7 @@ export const navData: Array<{ title: string; url: string }> = [
   { title: '빵 자료', url: '/book' },
 ];
 
-export const breadData: Array<{
-  id: number;
-  category: string;
-  title: string;
-  imgUrl: string;
-  country: string;
-  ingredient: Array<string>;
-}> = [
+export const breadData: Array<breadCardType> = [
   {
     id: 1,
     category: 'bread',
@@ -112,7 +107,7 @@ export const countryMap: Record<string, string> = {
   DE: '독일',
 };
 
-export const breadDetail: Record<number, Object> = {
+export const breadDetail: Record<number, breadDetailType> = {
   1: {
     title: '소금빵',
   },
