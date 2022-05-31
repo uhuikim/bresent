@@ -3,6 +3,7 @@ import { countryMap } from 'data/data';
 import ReactCountryFlag from 'react-country-flag';
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
 
 type Props = {
   data: {
@@ -11,6 +12,7 @@ type Props = {
     country: string;
     category: string;
     ingredient: Array<string>;
+    id: number;
   };
 };
 
@@ -61,40 +63,45 @@ const ingredientArea = (theme: Theme) => css`
 `;
 
 const Card = ({ data }: Props) => {
+  console.log(data);
   return (
-    <div css={wrap}>
-      <div css={imageArea}>
-        <Image
-          src={`/bread/${data.title}.png`}
-          width="100%"
-          height="100%"
-          layout="responsive"
-          objectFit="contain"
-        />
-      </div>
-      <div css={desArea}>
-        <p>{data.category}</p>
-        <p>{data.title}</p>
-        <div css={flag}>
-          <ReactCountryFlag
-            countryCode={`${data.country}`}
-            svg
-            style={{
-              width: '20px',
-            }}
-            title={`${data.country}`}
-          />
-          <span>{countryMap[data.country]}</span>
+    <Link href={`/dictionary/${data.id}`}>
+      <a>
+        <div css={wrap}>
+          <div css={imageArea}>
+            <Image
+              src={`/bread/${data.title}.png`}
+              width="100%"
+              height="100%"
+              layout="responsive"
+              objectFit="contain"
+            />
+          </div>
+          <div css={desArea}>
+            <p>{data.category}</p>
+            <p>{data.title}</p>
+            <div css={flag}>
+              <ReactCountryFlag
+                countryCode={`${data.country}`}
+                svg
+                style={{
+                  width: '20px',
+                }}
+                title={`${data.country}`}
+              />
+              <span>{countryMap[data.country]}</span>
+            </div>
+          </div>
+          <ul css={ingredientArea}>
+            {data.ingredient.map((el) => (
+              <li>
+                <Image src={`/ingredient/${el}.png`} width="35" height="35" />
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-      <ul css={ingredientArea}>
-        {data.ingredient.map((el) => (
-          <li>
-            <Image src={`/ingredient/${el}.png`} width="35" height="35" />
-          </li>
-        ))}
-      </ul>
-    </div>
+      </a>
+    </Link>
   );
 };
 
