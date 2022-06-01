@@ -99,7 +99,7 @@ const Header = () => {
               <a>
                 <li
                   css={navList}
-                  className={pathname === el.url ? 'active' : ''}
+                  className={pathname.includes(el.url) ? 'active' : ''}
                 >
                   {el.title}
                 </li>
