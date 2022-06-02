@@ -2,9 +2,8 @@ import Head from 'next/head';
 import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
-import { breadData } from 'data/data';
 import SubTitle from 'components/SubTitle';
-import Card from 'components/Crad';
+import CardSlider from 'components/CardSlider';
 
 const pageContainer = css`
   display: flex;
@@ -25,18 +24,6 @@ const BodyBlock = styled.div`
   transition: background-color 0.2s ease-in-out;
 `;
 
-const logo = (theme: Theme) =>
-  css`
-    display: flex;
-    align-items: center;
-    color: ${theme.main};
-    font-size: 2rem;
-    padding: 1rem;
-    & > p {
-      margin-left: 0.5rem;
-    }
-  `;
-
 const dicWrap = () => css`
   display: grid;
   width: 100%;
@@ -54,11 +41,12 @@ const IndexPage: NextPage = () => {
       </Head>
       <BodyBlock />
       <SubTitle title="세상의 모든 빵" link="/dictionary" />
-      <div css={dicWrap}>
+      {/* <div css={dicWrap}>
         {breadData.map((el) => (
           <Card data={el} key={el.title} />
         ))}
-      </div>
+      </div> */}
+      <CardSlider />
     </div>
   );
 };

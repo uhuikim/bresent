@@ -15,6 +15,7 @@ const wrap = (theme: Theme) =>
     box-shadow: 2px 2px 1px ${theme.shadow};
     position: relative;
     background: ${theme.white};
+    width: 249px;
     > img {
       width: 230px;
     }
@@ -24,6 +25,9 @@ const wrap = (theme: Theme) =>
 
 const imageArea = () => css`
   padding: 0 1.5rem;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 const desArea = (theme: Theme) => css`
   padding: 0.8rem 1.5rem;
