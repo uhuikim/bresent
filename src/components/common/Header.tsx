@@ -14,32 +14,7 @@ const wrap = (theme: Theme) => css`
   justify-content: center;
   align-items: center;
   background: ${theme.header};
-`;
-const topHeader = () => css`
-  width: 100%;
-  text-align: right;
-  padding-top: 0.5rem;
-`;
-
-const logo = () => css``;
-
-const toggleThemeButton = (theme: Theme) => css`
-  outline: none;
-  border: 0;
-  background-color: transparent;
-  color: ${theme.text};
-  font-size: 12px;
-  cursor: pointer;
-  &:hover,
-  &:active {
-    text-decoration: underline;
-  }
-  &:hover {
-    opacity: 0.8;
-  }
-  &:active {
-    opacity: 0.7;
-  }
+  padding-top: 1rem;
 `;
 
 const navBar = (theme: Theme) =>
@@ -76,12 +51,7 @@ const Header = () => {
 
   return (
     <header css={wrap}>
-      <div css={topHeader}>
-        <button css={toggleThemeButton} onClick={() => toggleTheme()}>
-          {isDarkTheme ? 'Light Theme' : 'Dark Theme'}
-        </button>
-      </div>
-      <h1 css={logo}>
+      <h1>
         <Link href="/">
           <a>
             <Image

@@ -15,12 +15,12 @@ const wrap = (theme: Theme) =>
     box-shadow: 2px 2px 1px ${theme.shadow};
     position: relative;
     background: ${theme.white};
+    border-radius: 10px;
     width: 249px;
     > img {
       width: 230px;
     }
-    overflow: hidden;
-    border-radius: 10px;
+    margin-left: 1rem;
   `;
 
 const imageArea = () => css`
