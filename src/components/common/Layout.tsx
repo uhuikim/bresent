@@ -3,6 +3,7 @@ import { css, Theme } from '@emotion/react';
 import Header from './Header';
 import { ReactNode } from 'react';
 import { breakpoints } from 'styles/spacing';
+import Footer from './Footer';
 
 const wrap = () => css`
   display: flex;
@@ -12,7 +13,7 @@ const wrap = () => css`
 const contentWrap = (theme: Theme) => css`
   width: 100%;
   max-width: ${breakpoints.xl}px;
-  padding: 0 3rem;
+  height: 100%;
 `;
 
 const Layout = ({ children }: { children: ReactNode }) => {
@@ -20,6 +21,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <div css={wrap}>
       <Header />
       <main css={contentWrap}>{children}</main>
+      <Footer />
     </div>
   );
 };

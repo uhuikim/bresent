@@ -20,23 +20,23 @@ const navBar = (theme: Theme) =>
     color: ${theme.text};
     display: flex;
     flex-direction: column;
-    padding: ${spacing.xl} 3rem;
+    padding: ${spacing.xl} 0;
     margin: 0 auto;
   `;
 
+const test = () => css`
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+`;
+
 const firstNav = (theme: Theme) => css`
   display: flex;
-  align-items: center;
-  > ul {
-    display: flex;
-    gap: 1.5rem;
-    margin-left: auto;
-  }
+  justify-content: center;
 `;
 const secondNav = (theme: Theme) => css`
   display: flex;
   gap: 1.5rem;
-  margin-top: ${spacing.xl};
 
   > a {
     font-size: 1.1rem;
@@ -57,26 +57,27 @@ const Header = () => {
   return (
     <header css={wrap}>
       <nav css={navBar}>
+        <ul css={test}>
+          <Link href="/login">
+            <a>
+              <li>로그인</li>
+            </a>
+          </Link>
+          <Link href="/login">
+            <a>
+              <li>회원가입</li>
+            </a>
+          </Link>
+        </ul>
         <div css={firstNav}>
           <h1>
             <Link href="/">
-              <a>Bresent</a>
+              <a>
+                <Image src="/logo.png" width={96} height={66} />
+              </a>
             </Link>
           </h1>
-          <ul>
-            <Link href="/login">
-              <a>
-                <li>로그인</li>
-              </a>
-            </Link>
-            <Link href="/login">
-              <a>
-                <li>회원가입</li>
-              </a>
-            </Link>
-          </ul>
         </div>
-
         <ul css={secondNav}>
           {navData.map((el) => (
             <Link href={el.url}>
