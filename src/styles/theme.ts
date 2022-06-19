@@ -5,9 +5,10 @@ const palette = {
   main: '#F14FA2',
   darkHeader: '#202020',
   shadow: '#efefef',
-  darkShadow: '##1c1e20',
+  darkShadow: '#1c1e20',
   text1: '#333',
   text2: '#828282',
+  gray1: '#d9d9d9',
 };
 
 type ThemeKey =
@@ -17,7 +18,8 @@ type ThemeKey =
   | 'header'
   | 'shadow'
   | 'white'
-  | 'subtext';
+  | 'subtext'
+  | 'gray1';
 export type Theme = Record<ThemeKey, string>;
 
 export const lightTheme: Theme = {
@@ -28,6 +30,7 @@ export const lightTheme: Theme = {
   header: palette.white,
   shadow: palette.shadow,
   white: palette.white,
+  gray1: palette.gray1,
 };
 
 export const darkTheme: Theme = {
@@ -38,4 +41,5 @@ export const darkTheme: Theme = {
   header: palette.darkHeader,
   shadow: palette.darkShadow,
   white: palette.white,
+  gray1: palette.gray1,
 };

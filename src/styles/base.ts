@@ -10,6 +10,13 @@ const base = css`
       sans-serif;
     font-size: 0.9rem;
   }
+  html,
+  body,
+  body > div:first-child,
+  div#__next,
+  div#__next > div {
+    height: 100%;
+  }
   a {
     color: inherit;
     text-decoration: none;
