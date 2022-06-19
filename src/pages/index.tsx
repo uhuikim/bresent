@@ -35,17 +35,12 @@ const IndexPage: NextPage = () => {
   return (
     <div css={pageContainer}>
       <Head>
-        <title>bresent</title>
-        <meta name="description" content="bresent" />
+        <title>Bresent</title>
+        <meta name="description" content="Bresent" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BodyBlock />
       <SubTitle title="세상의 모든 빵" link="/dictionary" />
-      {/* <div css={dicWrap}>
-        {breadData.map((el) => (
-          <Card data={el} key={el.title} />
-        ))}
-      </div> */}
       <CardSlider />
     </div>
   );

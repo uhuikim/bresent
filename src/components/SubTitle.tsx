@@ -8,8 +8,8 @@ type Props = {
 };
 
 const titleStyle = (theme: Theme) => css`
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
   padding: 2rem;
   color: ${theme.text};
   position: relative;
