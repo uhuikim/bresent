@@ -62,6 +62,11 @@ const sns = [
     url: 'https://www.instagram.com/bresent__',
     img: 'in',
   },
+  {
+    name: 'github',
+    url: 'https://github.com/uhuikim/bresent',
+    img: 'git',
+  },
 ];
 
 const Footer = () => {
