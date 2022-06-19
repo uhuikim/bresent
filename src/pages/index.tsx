@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
@@ -34,11 +33,6 @@ const dicWrap = () => css`
 const IndexPage: NextPage = () => {
   return (
     <div css={pageContainer}>
-      <Head>
-        <title>Bresent</title>
-        <meta name="description" content="Bresent" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <BodyBlock />
       <SubTitle title="세상의 모든 빵" link="/dictionary" />
       <CardSlider />
