@@ -79,8 +79,8 @@ const Footer = () => {
         </div>
         <div css={snsList}>
           {sns.map((sns) => (
-            <li css={snsItem}>
-              <Link passHref href={sns.url}>
+            <Link passHref href={sns.url}>
+              <li css={snsItem}>
                 <a target="_blank" rel="noopener noreferrer">
                   <Image
                     src={`/assets/icons/icon_sns_${sns.img}.png`}
@@ -89,8 +89,8 @@ const Footer = () => {
                     height={22}
                   />
                 </a>
-              </Link>
-            </li>
+              </li>
+            </Link>
           ))}
         </div>
         <div css={footerRight}>
