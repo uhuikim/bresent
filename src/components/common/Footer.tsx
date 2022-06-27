@@ -11,6 +11,7 @@ const wrap = (theme: Theme) => css`
   border-top: 1px solid ${theme.shadow};
   padding: 2rem 3rem;
   color: ${theme.subtext};
+  margin-top: auto;
 `;
 
 const layout = (theme: Theme) => css`
@@ -79,7 +80,7 @@ const Footer = () => {
         </div>
         <div css={snsList}>
           {sns.map((sns) => (
-            <Link passHref href={sns.url}>
+            <Link passHref href={sns.url} key={sns.name}>
               <li css={snsItem}>
                 <a target="_blank" rel="noopener noreferrer">
                   <Image

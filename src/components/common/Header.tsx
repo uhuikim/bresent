@@ -80,7 +80,7 @@ const Header = () => {
         </div>
         <ul css={secondNav}>
           {navData.map((el) => (
-            <Link href={el.url}>
+            <Link href={el.url} key={el.url}>
               <a className={pathname.includes(el.url) ? 'active' : ''}>
                 <li>{el.title}</li>
               </a>

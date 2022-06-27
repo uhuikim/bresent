@@ -2,11 +2,12 @@ import Head from 'next/head';
 import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
+import { ingredient } from 'data/data';
+import IngredientCard from './components/IngredientCard';
 
 const pageContainer = css`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   width: 100%;
 `;
@@ -22,17 +23,16 @@ const BodyBlock = styled.div`
   transition: background-color 0.2s ease-in-out;
 `;
 
-const logo = (theme: Theme) =>
+const country = (theme: Theme) =>
   css`
-    display: flex;
-    align-items: center;
-    color: ${theme.main};
-    font-size: 2rem;
-    padding: 1rem;
-    & > p {
-      margin-left: 0.5rem;
-    }
+    font-size: 1.8rem;
+    font-weight: bold;
   `;
+
+const wrappedCard = () => css`
+  display: flex;
+  gap: 40px;
+`;
 
 const IndexPage: NextPage = () => {
   return (
@@ -43,6 +43,27 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BodyBlock />
+      <div>
+        <h3 css={country}>프랑스</h3>
+        <div css={wrappedCard}>
+          {ingredient.france.map((el) => (
+            <IngredientCard key={el.manufacturer} el={el} />
+          ))}
+        </div>
+      </div>
+      <div>
+        <h3 css={country}>한국</h3>
+        {ingredient.korea.map((el) => (
+          <IngredientCard key={el.manufacturer} el={el} />
+        ))}
+      </div>
+
+      <div>
+        <h3 css={country}>뉴질랜드</h3>
+        {ingredient.newzealand.map((el) => (
+          <IngredientCard key={el.manufacturer} el={el} />
+        ))}
+      </div>
     </div>
   );
 };
