@@ -14,23 +14,23 @@ const wrap = (theme: Theme) => css`
   margin-top: auto;
 `;
 
-const layout = (theme: Theme) => css`
+const layout = () => css`
   display: flex;
   margin: 0 auto;
   max-width: ${breakpoints.xl}px;
 `;
 
-const footerLeft = (theme: Theme) => css`
+const footerLeft = () => css`
   width: 33.333%;
   margin-top: auto;
 `;
-const footerRight = (theme: Theme) => css`
+const footerRight = () => css`
   width: 33.333%;
   margin-top: auto;
   text-align: right;
 `;
 
-const snsList = (theme: Theme) => css`
+const snsList = () => css`
   width: 33.333%;
   display: flex;
   justify-content: center;

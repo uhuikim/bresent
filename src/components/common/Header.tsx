@@ -2,10 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import { css, Theme } from '@emotion/react';
-import { useTheme } from 'context/ThemeProvider';
 import Link from 'next/link';
-import { navData } from 'data/data';
-import { useRouter } from 'next/router';
 import { breakpoints, spacing } from 'styles/spacing';
 
 const wrap = (theme: Theme) => css`
@@ -30,30 +27,12 @@ const test = () => css`
   justify-content: flex-end;
 `;
 
-const firstNav = (theme: Theme) => css`
+const firstNav = () => css`
   display: flex;
   justify-content: center;
 `;
-const secondNav = (theme: Theme) => css`
-  display: flex;
-  gap: 1.5rem;
-
-  > a {
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    &:hover {
-      color: ${theme.main};
-    }
-    &.active {
-      color: ${theme.main};
-    }
-  }
-`;
 
 const Header = () => {
-  const { pathname } = useRouter();
-
   return (
     <header css={wrap}>
       <nav css={navBar}>
