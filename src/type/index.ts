@@ -5,5 +5,4 @@ export type breadCardType = {
   title: string;
   imgUrl: string;
   country: string;
-  ingredient: Array<string>;
 };

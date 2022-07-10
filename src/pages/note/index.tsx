@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { css, Theme } from '@emotion/react';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
 
@@ -21,18 +21,6 @@ const BodyBlock = styled.div`
   z-index: -1;
   transition: background-color 0.2s ease-in-out;
 `;
-
-const logo = (theme: Theme) =>
-  css`
-    display: flex;
-    align-items: center;
-    color: ${theme.main};
-    font-size: 2rem;
-    padding: 1rem;
-    & > p {
-      margin-left: 0.5rem;
-    }
-  `;
 
 const IndexPage: NextPage = () => {
   return (

@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import type { NextPage } from 'next';
 import SubTitle from 'components/SubTitle';
 import CardSlider from 'components/CardSlider';
+import { breadData } from 'data/data';
+import Card from 'components/Crad';
 
 const pageContainer = css`
   display: flex;
@@ -30,12 +32,22 @@ const dicWrap = () => css`
   gap: 20px;
 `;
 
+const cardWrap = () => css`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+`;
+
 const IndexPage: NextPage = () => {
   return (
     <div css={pageContainer}>
       <BodyBlock />
       <SubTitle title="세상의 모든 빵" link="/dictionary" />
-      <CardSlider />
+      <div css={cardWrap}>
+        {breadData.map((el) => (
+          <Card data={el} key={el.title} />
+        ))}
+      </div>
     </div>
   );
 };

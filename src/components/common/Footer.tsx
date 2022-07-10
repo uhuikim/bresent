@@ -11,25 +11,26 @@ const wrap = (theme: Theme) => css`
   border-top: 1px solid ${theme.shadow};
   padding: 2rem 3rem;
   color: ${theme.subtext};
+  margin-top: auto;
 `;
 
-const layout = (theme: Theme) => css`
+const layout = () => css`
   display: flex;
   margin: 0 auto;
   max-width: ${breakpoints.xl}px;
 `;
 
-const footerLeft = (theme: Theme) => css`
+const footerLeft = () => css`
   width: 33.333%;
   margin-top: auto;
 `;
-const footerRight = (theme: Theme) => css`
+const footerRight = () => css`
   width: 33.333%;
   margin-top: auto;
   text-align: right;
 `;
 
-const snsList = (theme: Theme) => css`
+const snsList = () => css`
   width: 33.333%;
   display: flex;
   justify-content: center;
@@ -79,8 +80,8 @@ const Footer = () => {
         </div>
         <div css={snsList}>
           {sns.map((sns) => (
-            <li css={snsItem}>
-              <Link passHref href={sns.url}>
+            <Link passHref href={sns.url} key={sns.name}>
+              <li css={snsItem}>
                 <a target="_blank" rel="noopener noreferrer">
                   <Image
                     src={`/assets/icons/icon_sns_${sns.img}.png`}
@@ -89,8 +90,8 @@ const Footer = () => {
                     height={22}
                   />
                 </a>
-              </Link>
-            </li>
+              </li>
+            </Link>
           ))}
         </div>
         <div css={footerRight}>
