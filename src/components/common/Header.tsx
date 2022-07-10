@@ -78,7 +78,7 @@ const Header = () => {
             </Link>
           </h1>
         </div>
-        <ul css={secondNav}>
+        {/* <ul css={secondNav}>
           {navData.map((el) => (
             <Link href={el.url} key={el.url}>
               <a className={pathname.includes(el.url) ? 'active' : ''}>
@@ -86,7 +86,7 @@ const Header = () => {
               </a>
             </Link>
           ))}
-        </ul>
+        </ul> */}
       </nav>
     </header>
   );
