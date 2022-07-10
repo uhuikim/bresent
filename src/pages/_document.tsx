@@ -5,7 +5,6 @@ export default class RootDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Bresent</title>
           <meta
             name="description"
             content="빵을 사랑하는 사람들을 위한 사이트입니다."
