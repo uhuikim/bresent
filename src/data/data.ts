@@ -294,10 +294,10 @@ export const breadData: Array<breadCardType> = [
   },
   {
     id: 32,
-    category: 'bread',
+    category: 'cake',
     title: '팡도르',
     imgUrl: '팡도르',
-    country: '',
+    country: 'IT',
   },
   {
     id: 33,
@@ -457,7 +457,7 @@ export const breadData: Array<breadCardType> = [
     id: 55,
     category: 'cookie',
     title: '갈레트 브루통',
-    imgUrl: '갈레트 브루통',
+    imgUrl: '갈레트브루통',
     country: '',
   },
   {
@@ -557,6 +557,13 @@ export const breadData: Array<breadCardType> = [
     title: '완두빵',
     imgUrl: '완두빵',
     country: '',
+  },
+  {
+    id: 70,
+    category: 'cake',
+    title: '파네토네',
+    imgUrl: '파네토네',
+    country: 'IT',
   },
 ];
 
