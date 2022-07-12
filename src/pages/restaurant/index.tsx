@@ -24,18 +24,6 @@ const BodyBlock = styled.div`
   transition: background-color 0.2s ease-in-out;
 `;
 
-const logo = (theme: Theme) =>
-  css`
-    display: flex;
-    align-items: center;
-    color: ${theme.main};
-    font-size: 2rem;
-    padding: 1rem;
-    & > p {
-      margin-left: 0.5rem;
-    }
-  `;
-
 const wrap = (theme: Theme) => css`
   width: 100%;
   background: ${theme.white};
@@ -49,7 +37,7 @@ const tableHead = (theme: Theme) => css`
   background: ${theme.gray1};
 `;
 
-const tableBody = (theme: Theme) => css`
+const tableBody = () => css`
   text-align: center;
   padding: 1rem;
 `;
@@ -68,13 +56,15 @@ const IndexPage: NextPage = () => {
         <thead>
           <tr>
             {TABLE_HEAD.map((head) => (
-              <th css={tableHead}>{head}</th>
+              <th key={head} css={tableHead}>
+                {head}
+              </th>
             ))}
           </tr>
         </thead>
         <tbody>
           {restaurantData.map((content) => (
-            <tr>
+            <tr key={content.No}>
               <td css={tableBody}>{content.No}</td>
               <td css={tableBody}>{content.name}</td>
               <td css={tableBody}>{content.popular}</td>

@@ -22,18 +22,6 @@ const BodyBlock = styled.div`
   transition: background-color 0.2s ease-in-out;
 `;
 
-const logo = (theme: Theme) =>
-  css`
-    display: flex;
-    align-items: center;
-    color: ${theme.main};
-    font-size: 2rem;
-    padding: 1rem;
-    & > p {
-      margin-left: 0.5rem;
-    }
-  `;
-
 const IndexPage: NextPage = () => {
   return (
     <div css={pageContainer}>
