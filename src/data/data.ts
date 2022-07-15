@@ -286,13 +286,6 @@ export const breadData: Array<breadCardType> = [
     country: 'IT',
   },
   {
-    id: 31,
-    category: 'cake',
-    title: '크레페',
-    imgUrl: '크레페',
-    country: 'FR',
-  },
-  {
     id: 32,
     category: 'cake',
     title: '팡도르',
@@ -303,7 +296,7 @@ export const breadData: Array<breadCardType> = [
     id: 33,
     category: 'cake',
     title: '바스크 치즈케이크',
-    imgUrl: '바스크',
+    imgUrl: '바스크치즈케이크',
     country: '',
   },
   {
@@ -326,13 +319,6 @@ export const breadData: Array<breadCardType> = [
     title: '모카빵',
     imgUrl: '모카빵',
     country: '',
-  },
-  {
-    id: 37,
-    category: 'bread',
-    title: '부시맨 브레드',
-    imgUrl: '부시맨',
-    country: 'AU',
   },
   {
     id: 38,
@@ -415,7 +401,7 @@ export const breadData: Array<breadCardType> = [
     id: 49,
     category: '?',
     title: '파르 브루통',
-    imgUrl: '파르 브루통',
+    imgUrl: '파르브루통',
     country: 'FR',
   },
   {
@@ -564,6 +550,20 @@ export const breadData: Array<breadCardType> = [
     title: '파네토네',
     imgUrl: '파네토네',
     country: 'IT',
+  },
+  {
+    id: 71,
+    category: 'bread',
+    title: '야채사라다빵',
+    imgUrl: '야채사라다빵',
+    country: '',
+  },
+  {
+    id: 72,
+    category: 'bread',
+    title: '타코야끼',
+    imgUrl: '타코야끼',
+    country: '',
   },
 ];
 

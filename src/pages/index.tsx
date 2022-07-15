@@ -5,6 +5,8 @@ import SubTitle from 'components/SubTitle';
 import CardSlider from 'components/CardSlider';
 import { breadData } from 'data/data';
 import Card from 'components/Crad';
+import { getData } from './api';
+import { useQuery } from 'react-query';
 
 const pageContainer = css`
   display: flex;
@@ -39,6 +41,10 @@ const cardWrap = () => css`
 `;
 
 const IndexPage: NextPage = () => {
+  // 상세 데이터 불러오기
+  const { data } = useQuery('bread', () => getData('/api/bread'));
+  console.log(data);
+
   return (
     <div css={pageContainer}>
       <BodyBlock />
